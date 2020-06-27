@@ -4,10 +4,10 @@ import router from './router'
 import store from './store'
 import axios from './plugins/axios'
 import './plugins/device.js'
-import './plugins/element.js'
 import './plugins/date.js'
 import './plugins/console.js'
 import 'babel-polyfill'
+import 'animate.css'
 Vue.config.productionTip = false
 
 window.__global__ = {
@@ -16,7 +16,7 @@ window.__global__ = {
 }
 
 // 在这里记录一些版本信息
-window.__version__ = 26
+window.__version__ = 1
 
 // 支持跨用户调试
 window.auth = ( token ) => {

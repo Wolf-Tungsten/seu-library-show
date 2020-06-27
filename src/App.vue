@@ -1,11 +1,11 @@
 <template>
   <div id="app">
+    <audio src="./assets/亲爱的旅人啊.mp3" autoplay loop></audio>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import "element-ui/lib/theme-chalk/index.css";
 import qs from 'querystring';
 export default {
   name: "app",
@@ -70,8 +70,8 @@ export default {
     }
   },
   created() {
-    this.initAxios();
-    this.login();
+    //this.initAxios();
+    //this.login();
   }
 };
 </script>
@@ -88,9 +88,39 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-.content-title {
-  font-size: 16px;
+.content {
+  display:flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+}
+.bg {
+  background-image: url('./assets/牛皮纸背景.jpg');
+  width: 100%;
+  min-height: 100vh;
+  background-size: 100% 100%;
+}
+.center {
+  align-self: center;
+}
+.delay-1s {
+  animation-delay: 1s;
+}
+.delay-2s {
+  animation-delay: 2s;
+}
+.row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.hand-write {
+  height: 40px;
+}
+.print-font {
+  color:#44595D;
+  font-size: 32px;
   font-weight: bold;
-  margin-top: 20px;
 }
 </style>

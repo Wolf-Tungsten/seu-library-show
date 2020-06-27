@@ -1,5 +1,11 @@
 <template>
-  <div>梦想开始的地方</div>
+  <div class="bg">
+    <div class="content">
+      <img class="center animate__animated animate__fadeIn" width="90%;" src="../assets/欢迎页.png" />
+      <img style="animation-delay:1s; width:160px; margin-top: 200px;" class="animate__animated animate__fadeIn center" src='../assets/点击开启按钮.png'/>
+      <div style="font-size:12px; animation-delay:1s; margin-top: 15px;" class="animate__animated animate__fadeIn center">面向东南大学2020届本科毕业生开放</div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -19,9 +25,6 @@ export default {
   methods: {
   },
   async created() {
-    this.device.isDesktop = this.$device.isDesktop;
-    this.device.isMobile = this.$device.isMobile;
-    this.device.isWechat = this.$device.isWechat;
   }
 };
 </script>

@@ -11,6 +11,7 @@
     "build": "parcel build ./public/index.html --public-url //cdn.xgbxscwx.myseu.cn/;"
   },
   "dependencies": {
+    "animate.css": "^4.1.0",
     "axios": "^0.19.2",
     "babel-polyfill": "^6.26.0",
     "element-ui": "^2.13.0",
