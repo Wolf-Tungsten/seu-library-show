@@ -14,7 +14,7 @@
           <div class="print-font">{{entrySchoolRank}}%</div>
           <img style="height:50px;" src="../../assets/全校同届同学.png" />
       </div>
-      <router-link to="/page-4" class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:4s">
+      <router-link to="/page-4" class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:3s">
           <img style="height:50px;margin-top:60px;" src="../../assets/下一页.png" />
       </router-link>
     </div>
