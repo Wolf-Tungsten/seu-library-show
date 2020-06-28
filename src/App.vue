@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <audio src="./assets/亲爱的旅人啊.mp3" autoplay loop></audio>
+    <audio ref="bgm" src="./assets/亲爱的旅人啊.mp3" loop preload="auto"></audio>
     <router-view></router-view>
   </div>
 </template>
@@ -72,6 +72,9 @@ export default {
   created() {
     this.initAxios();
     //this.login();
+    window.playBgm = ()=>{
+      this.$refs['bgm'].play()
+    }
   }
 };
 </script>
