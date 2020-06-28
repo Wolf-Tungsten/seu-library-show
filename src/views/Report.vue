@@ -66,6 +66,29 @@ export default {
     this.checkoutCount = payload[6]
     this.entrySchoolRank = payload[4]
     this.checkoutSchoolRank = payload[8]
+    let wxConfig = await this.$axios.post(
+      "https://xgbxscwx.seu.edu.cn/api/wxConfig",
+      { url: ("" + window.location).split("#")[0] }
+    );
+    wx.config(wxConfig.data.result);
+    wx.ready(async () => {
+      wx.updateTimelineShareData({
+        title: `【东南大学图书馆】${this.name}的毕业报告单`, // 分享标题
+        link: `https://xgbxscwx.seu.edu.cn/library-show/#/report/${this.$store.state.zippedPayload}`, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: "https://xgbxscwx.seu.edu.cn/library-show/logo.png", // 分享图标
+        success: function() {
+          console.log('Timeline分享设置成功')
+        }
+      });
+      wx.updateAppMessageShareData({
+        title: `【东南大学图书馆】${this.name}的毕业报告单`, // 分享标题
+        link: `https://xgbxscwx.seu.edu.cn/library-show/#/report/${this.$store.state.zippedPayload}`, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: "https://xgbxscwx.seu.edu.cn/library-show/logo.png", // 分享图标
+        success: function() {
+          console.log('AppMessage分享设置成功')
+        }
+      });
+    });
   }
 };
 </script>

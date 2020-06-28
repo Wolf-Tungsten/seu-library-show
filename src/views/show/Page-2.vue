@@ -14,7 +14,7 @@
       <div class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:3s">
           <div class="print-font">我累积进馆{{entryCount}}次</div>
       </div>
-      <router-link to="/page-3" class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:4s">
+      <router-link to="/page-3" replace class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:4s">
           <img style="height:50px;margin-top:60px;" src="../../assets/下一页.png" />
       </router-link>
     </div>
@@ -41,6 +41,9 @@ export default {
     }
   },
   async created() {
+    if(!this.$store.state.token){
+      this.$router.replace('/')
+    }
   }
 };
 </script>

@@ -13,7 +13,7 @@
           <div class="print-font">{{checkoutCount}}</div>
           <img style="height:36px;" src="../../assets/次.png" />
       </div>
-      <router-link to="/page-5" class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:3s">
+      <router-link to="/page-5" replace class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:3s">
           <img style="height:50px;margin-top:60px;" src="../../assets/下一页.png" />
       </router-link>
     </div>
@@ -40,6 +40,9 @@ export default {
     }
   },
   async created() {
+    if(!this.$store.state.token){
+      this.$router.replace('/')
+    }
   }
 };
 </script>

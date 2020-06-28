@@ -9,7 +9,7 @@
           <div class="print-font" style="font-size: 6vw; text-align:center;">《{{item}}》</div>
       </div>
       <div class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:2s; margin-top:40px;">
-        <router-link to="/page-1">
+        <router-link to="/page-1" replace>
           <img style="height:50px;" src="../../assets/再看一次.png" />
         </router-link>
         <div @click="report">
@@ -40,6 +40,9 @@ export default {
     }
   },
   async created() {
+    if(!this.$store.state.token){
+      this.$router.replace('/')
+    }
   }
 };
 </script>

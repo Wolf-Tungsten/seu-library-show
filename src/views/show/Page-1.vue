@@ -12,7 +12,7 @@
       <div class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:2s">
           <img style="width:80%;margin-top:40px;" src="../../assets/这是我与东南大学图书馆的.png" />
       </div>
-      <router-link to="/page-2" class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:3s">
+      <router-link to="/page-2" replace class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:3s">
           <img style="height:50px;margin-top:60px;" src="../../assets/下一页.png" />
       </router-link>
     </div>
@@ -35,6 +35,9 @@ export default {
     }
   },
   async created() {
+    if(!this.$store.state.token){
+      this.$router.replace('/')
+    }
   }
 };
 </script>
