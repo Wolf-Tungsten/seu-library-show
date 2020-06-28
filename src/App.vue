@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <audio src="./assets/亲爱的旅人啊.mp3" autoplay loop></audio> -->
+    <audio src="./assets/亲爱的旅人啊.mp3" autoplay loop></audio>
     <router-view></router-view>
   </div>
 </template>
