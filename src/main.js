@@ -8,6 +8,7 @@ import './plugins/date.js'
 import './plugins/console.js'
 import 'babel-polyfill'
 import 'animate.css'
+import 'loaders.css/loaders.min.css'
 Vue.config.productionTip = false
 
 window.__global__ = {
