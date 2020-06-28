@@ -2,10 +2,10 @@
   <div class="bg">
     <div class="content">
       <img class="center" width="90%;" src="../../assets/小馆标.png" />
-      <div class="row animate__animated animate__fadeIn" style="justify-content:center;">
+      <div v-if="firstBook" class="row animate__animated animate__fadeIn" style="justify-content:center;">
           <div class="print-font" style="font-size: 6vw; text-align: center; width: 80%;">《{{firstBook}}》</div>
       </div>
-      <div class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:1s">
+      <div v-if="firstBook" class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:1s">
           <img class="hand-write" style="height:50px; margin-top:10px;" src="../../assets/是我借阅的第一本书.png" />
       </div>
       <div class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:2s; margin-top:60px;">

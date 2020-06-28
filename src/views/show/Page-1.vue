@@ -2,8 +2,8 @@
   <div class="bg">
     <div class="content">
       <img class="center animate__animated animate__fadeIn" width="90%;" src="../../assets/小馆标.png" />
-      <div class="row animate__animated animate__fadeIn" style="margin-left: 40px; animation-delay:1s">
-          <img class="hand-write" src="../../assets/我是.png"/>
+      <div class="row animate__animated animate__fadeIn" style="animation-delay:1s">
+          <img class="hand-write" style="margin-left:40px;" src="../../assets/我是.png"/>
           <div class="print-font" style="margin-left:10px;">{{name}}</div>
       </div>
       <div class="row animate__animated animate__fadeIn" style="justify-content:flex-end; animation-delay:1s">
