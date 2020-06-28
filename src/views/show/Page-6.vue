@@ -6,15 +6,15 @@
           <img class="hand-write" style="height:120px;" src="../../assets/根据我的借阅记录.png" />
       </div>
       <div v-for="item in recommendList" :key="item" class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:1s; margin-top:10px;">
-          <div class="print-font">《{{item}}》</div>
+          <div class="print-font" style="font-size: 6vw; text-align:center;">《{{item}}》</div>
       </div>
       <div class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:2s; margin-top:40px;">
         <router-link to="/page-1">
           <img style="height:50px;" src="../../assets/再看一次.png" />
         </router-link>
-        <router-link to="/page-7">
+        <div @click="report">
           <img style="height:50px;margin-left:20px;" src="../../assets/生成我的报告单.png" />
-        </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -27,10 +27,17 @@ export default {
   },
   data() {
     return {
-      recommendList:['C++从入门到精通','高等数学']
     };
   },
   methods: {
+    report(){
+      this.$router.replace(`/report/${this.$store.state.zippedPayload}`)
+    }
+  },
+  computed:{
+    recommendList(){
+      return this.$store.state.payload.recommendList
+    }
   },
   async created() {
   }

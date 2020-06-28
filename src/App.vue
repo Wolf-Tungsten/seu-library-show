@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <audio src="./assets/亲爱的旅人啊.mp3" autoplay loop></audio>
+    <!-- <audio src="./assets/亲爱的旅人啊.mp3" autoplay loop></audio> -->
     <router-view></router-view>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
   methods: {
     initAxios() {
       // 初始化 Axios 配置
-      this.$axios.defaults.baseURL = "https://xgbxscwx.seu.edu.cn/api/";
+      this.$axios.defaults.baseURL = "https://xgbxscwx.seu.edu.cn/library-show-api/";
       //this.$axios.defaults.baseURL = "localhost:3000";
       this.$axios.defaults.headers["x-api-token"] = this.$store.state.token;
     },
@@ -70,7 +70,7 @@ export default {
     }
   },
   created() {
-    //this.initAxios();
+    this.initAxios();
     //this.login();
   }
 };

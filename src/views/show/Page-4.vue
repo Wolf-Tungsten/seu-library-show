@@ -27,11 +27,17 @@ export default {
   },
   data() {
     return {
-      firstBook:'JavaScript从入门到精通',
-      checkoutCount:114
     };
   },
   methods: {
+  },
+  computed:{
+    firstBook(){
+      return this.$store.state.payload.firstBook
+    },
+    checkoutCount(){
+      return this.$store.state.payload.checkoutCount
+    }
   },
   async created() {
   }

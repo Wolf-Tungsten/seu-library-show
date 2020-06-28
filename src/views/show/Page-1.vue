@@ -25,11 +25,14 @@ export default {
   components: {
   },
   data() {
-    return {
-      name:'高睿昊'
-    };
+    return {}
   },
   methods: {
+  },
+  computed: {
+    name(){
+      return this.$store.state.payload.name
+    }
   },
   async created() {
   }

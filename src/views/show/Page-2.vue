@@ -28,11 +28,17 @@ export default {
   },
   data() {
     return {
-      firstEntryTime:'2018年11月4日 5:14',
-      entryCount:114514
     };
   },
   methods: {
+  },
+  computed:{
+    firstEntryTime(){
+      return this.$store.state.payload.firstEntryTime
+    },
+    entryCount(){
+      return this.$store.state.payload.entryCount
+    }
   },
   async created() {
   }

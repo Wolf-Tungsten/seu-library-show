@@ -3,7 +3,7 @@
     <div class="content">
       <img class="center" width="90%;" src="../../assets/小馆标.png" />
       <div class="row animate__animated animate__fadeIn" style="justify-content:center;">
-          <img class="hand-write" style="height:50px;" src="../../assets/借阅数量.png" />
+          <img class="hand-write" style="height:60px;" src="../../assets/借阅数量.png" />
       </div>
       <div class="row animate__animated animate__fadeIn" style="justify-content:center; animation-delay:1s; margin-top:10px;">
           <img class="hand-write" style="height:60px;" src="../../assets/在学院中排名.png" />
@@ -28,11 +28,17 @@ export default {
   },
   data() {
     return {
-      checkoutCollegeRank:1,
-      checkoutSchoolRank: 97.2,
     };
   },
   methods: {
+  },
+  computed:{
+    checkoutCollegeRank(){
+      return this.$store.state.payload.checkoutCollegeRank
+    },
+    checkoutSchoolRank(){
+      return this.$store.state.payload.checkoutSchoolRank
+    }
   },
   async created() {
   }
