@@ -70,7 +70,6 @@ export default {
     let payload = await this.$axios.get(`/library?token=${token}`);
     payload = payload.data.result;
     this.$store.commit("savePayload", payload);
-    console.log(payload);
     let zippedPayload = [
       payload.name,
       payload.firstEntryTime, // 首次进馆时间，字符串
@@ -97,6 +96,14 @@ export default {
         imgUrl: "https://xgbxscwx.seu.edu.cn/library-show/logo.png", // 分享图标
         success: function() {
           console.log('Timeline分享设置成功')
+        }
+      });
+      wx.updateAppMessageShareData({
+        title: `【东南大学图书馆】${payload.name}的毕业报告单`, // 分享标题
+        link: `https://xgbxscwx.seu.edu.cn/library-show/#/report/${zippedPayload}`, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: "https://xgbxscwx.seu.edu.cn/library-show/logo.png", // 分享图标
+        success: function() {
+          console.log('AppMessage分享设置成功')
         }
       });
     });

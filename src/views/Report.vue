@@ -53,7 +53,6 @@ export default {
   },
   computed: {
     storeName(){
-      console.log(this.$store.state.payload.name)
       return this.$store.state.payload.name
     }
   },
