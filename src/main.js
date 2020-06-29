@@ -17,7 +17,7 @@ window.__global__ = {
 }
 
 // 在这里记录一些版本信息
-window.__version__ = 5
+window.__version__ = 6
 
 // 支持跨用户调试
 window.auth = ( token ) => {
